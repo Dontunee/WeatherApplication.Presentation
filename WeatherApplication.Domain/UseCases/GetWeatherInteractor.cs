@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using WeatherApplication.Domain.Entities;
-using WeatherApplication.Interfaces.UseCases;
+using WeatherApplication.Domain.Interfaces;
 
 namespace WeatherApplication.Domain.UseCases
 {
@@ -20,6 +21,9 @@ namespace WeatherApplication.Domain.UseCases
             _repository = repository;
         }
 
-
+        public Weather Handle([NotNull] string data)
+        {
+            return _repository.GetWeather(data);
+        }
     }
 }
