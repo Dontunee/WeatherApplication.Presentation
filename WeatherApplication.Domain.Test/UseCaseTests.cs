@@ -9,7 +9,7 @@ namespace WeatherApplication.Domain.Test
 {
     public class UseCaseTests
     {
-        private readonly Weather _weather = new Weather
+        private readonly WeatherEntity _weather = new WeatherEntity
         {
             Description = "Cloudy",
             MaxTemperature = 50,

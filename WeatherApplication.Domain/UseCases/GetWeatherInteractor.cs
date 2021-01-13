@@ -11,7 +11,7 @@ namespace WeatherApplication.Domain.UseCases
     {
         TResponse Handle(TRequest data);
     }
-    public class GetWeatherInteractor : IRequestHandler<string,Weather>
+    public class GetWeatherInteractor : IRequestHandler<string,WeatherEntity>
     {
 
         private readonly IRepository _repository;
@@ -21,7 +21,7 @@ namespace WeatherApplication.Domain.UseCases
             _repository = repository;
         }
 
-        public Weather Handle([NotNull] string data)
+        public WeatherEntity Handle([NotNull] string data)
         {
             return _repository.GetWeather(data);
         }

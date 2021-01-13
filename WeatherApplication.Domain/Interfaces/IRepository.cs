@@ -7,7 +7,7 @@ namespace WeatherApplication.Domain.Interfaces
 {
     public interface IRepository
     {
-        Weather GetWeather(string cityName);
+        WeatherEntity GetWeather(string cityName);
     }
 
 }

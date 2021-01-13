@@ -5,7 +5,8 @@ using System.Text;
 
 namespace WeatherApplication.Domain.Entities
 {
-    public class Weather
+    public class WeatherEntity
+
     {
         [Required]
         public string Description { get; set; }
